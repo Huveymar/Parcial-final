@@ -6,12 +6,13 @@ Eliminar Producto
 
 {% block content %}
 <form action="{{ url_for('borrarproducto') }}" method="POST">
-        <h1>Eliminar Producto</h1>
+        <h1 class="p-3 mb-2 bg-secondary text-white text-center">Eliminar Producto</h1>
+        <div class="mb-2">
+        <h6 for="EIDP">Digite El ID Del Producto A Eliminar</h6>
+        <input class="form-control"type="text" id="EIDP" name="EIDP">
+        </div>
         <div>
-        <label for="EIDP">Digite El ID Del Producto A Eliminar</label>
-        <input type="text" id="EIDP" name="EIDP">
         <button type="submit" class="btn btn-danger">Eliminar</button>
-        <button class="btn btn-info"><a href="{{ url_for('productos') }}" >Volver</a></button>
         </div>
 </form>
 {% endblock %}

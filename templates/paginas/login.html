@@ -6,19 +6,31 @@ Login
 
 
 {% block content %}
-		<form action="{{ url_for('login') }}" method="POST">
-		<h1>Iniciar Sesion</h1>
-		<div>
-			<label for="LCorreo">Correo</label>
-			<input class="BtnLogin" requiredtype="email" id="LCorreo" name="LCorreo">
+<div class="container h-100">
+	<div class="row justify-content-center h-100">
+		<div class="col-sm-6 align-self-center text-center">
+			<div class="card shadow">
+				<div class="card-body">           
+					<form action="{{ url_for('login') }}" method="POST" >
+						<h1 class="text-success">Iniciar Sesion</h1>
+						<div class="mb-2">
+							<label for="LCorreo"  class="mx-auto" style="width: 100px;">Correo</label>
+							<input class="form-control" requiredtype="email" id="LCorreo" name="LCorreo">
+						</div>
+						<div class="mb-2">
+							<label for="LContraseña" class="form-label">Contraseña</label>
+							<input class="form-control" required type="password" id="LContraseña" name="LContraseña">
+						</div>
+						<div>
+							<button type="submit" class="btn btn-success"> Ingresar </button>
+						</div>
+						<a href="{{ url_for('registrarse') }}">Crear cuenta</a>
+					</form>               
+				</div>
+			</div>
 		</div>
-		<div>
-			<label for="LContraseña">Contraseña</label>
-			<input class="BtnLogin" required type="password" id="LContraseña" name="LContraseña">
-		</div>
-		<div>
-			<button type="submit"> Ingresar </button>
-		</div>
-		<a href="{{ url_for('registrarse') }}">Crear cuenta</a>
-		</form>
+	</div>
+</div>  
+
+	
 {% endblock %}

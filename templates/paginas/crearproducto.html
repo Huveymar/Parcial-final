@@ -6,19 +6,22 @@
 
 {% block content %}
 <form action="{{ url_for('crearproducto') }}" method="POST">
-        <h1>Crear Productos</h1>
-        <div>
-        <label for="Nombre">Nombre</label>
-        <input type="text" id="Nombre" name="Nombre">
-        <label for="Precio">Precio</label>
-        <input type="text" id="Precio" name="Precio">
-        <select name="Categoria">
+        <h1 class="p-3 mb-2 bg-secondary text-white text-center">Crear Productos</h1>
+        <div class="mb-2">
+        <label class="mx-auto" style="width: 100px;" for="Nombre">Nombre</label>
+        <input class="form-control"  type="text" id="Nombre" name="Nombre">
+        <label class="mx-auto" style="width: 100px;" for="Precio">Precio</label>
+        <input class="form-control"  type="text" id="Precio" name="Precio">
+        <label class="mx-auto" style="width: 100px;" for="categoria">Categoria</label>
+        <select class="form-control"  name="Categoria">
             {%for Categorias in Categorias %}
             <option value="{{Categorias[1]}}">{{Categorias[1]}}</option>
             {%endfor%}
         </select>
+        </div>
+        <div>
         <button type="submit" class="btn btn-success">Guardar</button>
-        <button class="btn btn-info"><a href="{{ url_for('productos') }}" >Volver</a></button>
+        
         </div>
 </form>
 

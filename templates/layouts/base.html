@@ -8,15 +8,29 @@
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 </head>
 <body>
-    <nav class="nav-bar">
-        <ul>
-            <li><a href="{{ url_for('inicio') }}">Inicio</a></li>
-            <li><a href="{{ url_for('usuarios') }}">Usuarios</a></li>
-            <li><a href="{{ url_for('categorias') }}">Categorias</a></li>
-            <li><a href="{{ url_for('productos') }}">Productos</a></li>
-            <li><a href="{{ url_for('Logout') }}">Cerrar Sesión</a></li>
-        </ul>
-    </nav>
+    <p>
+        <a class="btn btn-success" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="multiCollapseExample1" href="{{ url_for('inicio') }}">Inicio</a>
+        <a class="btn btn-success" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="multiCollapseExample1" href="{{ url_for('categorias') }}">Categorias</a>
+        <a class="btn btn-success" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="multiCollapseExample1" href="{{ url_for('productos') }}">Productos</a>
+        <a class="btn btn-danger" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="multiCollapseExample1" href="{{ url_for('Logout') }}">Cerrar Sesión</a>
+    </p>
+      <div class="row">
+        <div class="col">
+          <div class="collapse multi-collapse" id="multiCollapseExample1">
+            <div class="card card-body">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="collapse multi-collapse" id="multiCollapseExample2">
+            <div class="card card-body">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+            </div>
+          </div>
+        </div>
+      </div>
+
     {% block content %}{% endblock %}
 </body>
 </html>

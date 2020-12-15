@@ -6,22 +6,25 @@
 
 {% block content %}
 <form action="{{ url_for('modificarproducto') }}" method="POST">
-        <h1>Crear Productos</h1>
-        <div>
-        <label for="EID">Identificador</label>
-        <input type="text" id="EID" name="EID">    
-        <label for="ENombre">Nombre</label>
-        <input type="text" id="Nombre" name="ENombre">
-        <label for="EPrecio">Precio</label>
-        <input type="text" id="EPrecio" name="EPrecio">
-        <select name="ECategoria">
+        <h1 class="p-3 mb-2 bg-secondary text-white text-center">Modificar Productos</h1>
+        <div class="mb-2">
+        <label class="mx-auto" style="width: 100px;" for="EID">Identificador</label>
+        <input class="form-control" type="text" id="EID" name="EID">    
+        <label class="mx-auto" style="width: 100px;" for="ENombre">Nombre</label>
+        <input class="form-control"type="text" id="Nombre" name="ENombre">
+        <label class="mx-auto" style="width: 100px;" for="EPrecio">Precio</label>
+        <input class="form-control" type="text" id="EPrecio" name="EPrecio">
+        <label class="mx-auto" style="width: 100px;" for="ECategorias">Categorias</label>
+        <select class="form-control" name="ECategoria">
             {%for Categorias in Categorias %}
             <option value="{{Categorias[1]}}">{{Categorias[1]}}</option>
             {%endfor%}
-        </select>
-        <button type="submit" class="btn btn-success">Guardar</button>
-        <button class="btn btn-info"><a href="{{ url_for('productos') }}" >Volver</a></button>
+        </select>   
+    </div>
+        <div>
+            <button type="submit" class="btn btn-success">Guardar</button>
         </div>
+       
 </form>
 
 {% endblock %}

@@ -5,11 +5,11 @@ Productos
 {% endblock %}
 
 {% block content %}
-<h1>Productos</h1>
+<h1 class="p-3 mb-2 bg-secondary text-white text-center">Productos</h1>
 <div>
-<button class="btn btn-success"><a href="{{ url_for('crearproducto') }}" >Crear</a></button>
+<button class="btn btn-success"><a class="btn btn-success" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"href="{{ url_for('crearproducto') }}" >Crear</a></button>
 </div>
-<table> 
+<table class="table table-bordered"> 
     <thead>
         <tr>
             <th>ID</th>
@@ -27,8 +27,8 @@ Productos
             <td>{{ lista[2] }}</td>
             <td>{{ lista[3] }}</td>
             <td>
-                <button class="btn btn-info"><a href="{{ url_for('modificarproducto') }}" >Editar</a></button>
-                <button class="btn btn-danger"><a href="{{ url_for('borrarproducto') }}" >Eliminar</a></button>
+                <a class="btn btn-primary" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"href="{{ url_for('modificarproducto') }}" >Editar</a>
+                <a class="btn btn-danger" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="multiCollapseExample1" href="{{ url_for('borrarproducto') }}" >Eliminar</a>
             </td>
         </tr>
         {% endfor %}
